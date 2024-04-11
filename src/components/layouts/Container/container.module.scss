@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+
+  @include media(">=xl") {
+    max-width: 89rem;
+  }
+}
