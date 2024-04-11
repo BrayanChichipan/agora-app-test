@@ -1,3 +1,13 @@
+@import 'colors';
+@import '_include-media.scss';
+@import 'fonts';
+@import '_weights.scss';
+
 body{
   margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  color: $neutral-1;
+  font-weight: $font-light;
+  background: $background-color;
 }

@@ -1,0 +1,76 @@
+
+@import '/src/styles/mixins.scss';
+@import '/src/styles/variables.scss';
+
+.container{
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.header-container {
+  height: 4.75rem;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  .button{
+    height: 1.5rem;
+  }
+
+  @include media("<=desktop") {
+    padding-inline: 1rem;
+  }
+
+  @include media("<tablet") {
+    height: 4.25em;
+  }
+
+  .logo-img{
+    height: 2.875rem;
+    width: auto;
+  }
+
+  .buttons-container{
+    
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    
+      .language-selector{
+        border-radius: .2rem;
+        background-color: $neutral-1;
+        color: $white;
+        padding: 5px 15px;
+        @include caption($font-semi-bold);
+        font-size: .75rem;
+      }
+
+  }
+}
+
+.mobile-links-container{
+  display: none;
+  overflow: hidden;
+  
+  @include media(">tablet", "<=desktop") {
+    background-color: #B1B1B1;
+    color: $white;
+  }
+}
+
+.mobile-links-container.open{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: grow .2s ease;
+}
+
+@keyframes grow {
+  from {
+    height: 0;
+  }
+  to {
+    height: 22rem;
+  }
+  
+}

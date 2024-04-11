@@ -1,10 +1,12 @@
+@import '/src/styles/include-media.scss';
+
 .container {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
   position: relative;
 
-  @include media(">=xl") {
-    max-width: 89rem;
+  @include media(">=desktop") {
+    max-width: calc(1140px - 1rem);
   }
 }

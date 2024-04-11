@@ -1,0 +1,47 @@
+@import '/src/styles/variables.scss';
+
+.button {
+	border-radius: 57px;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 3rem;
+	min-width: 6rem;
+	padding: 0 1rem;
+	font-weight: 500;
+	font-family: inherit;
+
+	&:disabled,
+	&:disabled:active,
+	&:disabled:hover {
+		background-color: $neutral-3;
+		color: $neutral-2;
+	}
+}
+
+.primary {
+	color: white;
+	background-color: var(--color);
+
+	@media (min-width: 768px) {
+		&:hover {
+			background-color: var(--color);
+		}
+	}
+
+	&:active {
+		background-color: var(--color-light);
+	}
+}
+
+.outline {
+	color: var(--color);
+	background-color: white;
+	border: 1px solid var(--color);
+
+	&:active {
+		border: 2px solid var(--color);
+	}
+}

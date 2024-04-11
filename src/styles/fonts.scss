@@ -1,0 +1,96 @@
+@import "_weights.scss";
+
+@mixin header-1($font-weight) {
+  font-weight: $font-weight;
+  font-size: 46px;
+  line-height: 60px;
+
+  @include media("<=tablet") {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+@mixin header-2($font-weight) {
+  font-weight: $font-weight;
+  font-size: 36px;
+  line-height: 54px;
+
+  @include media("<=tablet") {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@mixin header-3($font-weight) {
+  font-weight: $font-weight;
+  font-size: 28px;
+  line-height: 38px;
+
+  @include media("<=tablet") {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+@mixin header-4($font-weight) {
+  font-weight: $font-weight;
+  font-size: 24px;
+  line-height: 36px;
+  @include media("<=tablet") {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin header-5($font-weight) {
+  font-weight: $font-weight;
+  font-size: 20px;
+  line-height: 24px;
+  @include media("<=tablet") {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@mixin header-6($font-weight) {
+  font-weight: $font-weight;
+  font-size: 16px;
+  line-height: 20px;
+  @include media("<=tablet") {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@mixin body-1($font-weight) {
+  font-weight: $font-weight;
+  font-size: 20px;
+  line-height: 32px;
+  @include media("<=tablet") {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin body-2($font-weight) {
+  font-weight: $font-weight;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include media("<=tablet") {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@mixin caption($font-weight) {
+  font-weight: $font-weight;
+  font-size: 14px;
+  line-height: 20px;
+
+  @include media("<=tablet") {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

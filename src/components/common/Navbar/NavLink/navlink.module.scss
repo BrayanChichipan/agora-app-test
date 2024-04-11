@@ -1,0 +1,13 @@
+@import "/src/styles/mixins.scss";
+@import "/src/styles/variables.scss";
+
+.nav-link{
+  padding: 13px 8px;
+  @include caption($font-light);
+  color: $neutral-1;
+  text-decoration: none;
+}
+
+.nav-link--active{
+  color: $primary-color;
+}
