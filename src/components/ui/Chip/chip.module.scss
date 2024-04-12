@@ -1,0 +1,22 @@
+@import '/src/styles/mixins.scss';
+@import '/src/styles/variables.scss';
+
+.chip-container {
+
+	display: flex;
+	align-items: center;
+	height: 1.5rem;
+	padding: 0 1rem;
+	width: fit-content;
+	background-color: var(--color);
+	border-radius: 24px;
+	cursor: pointer;
+	color: $white;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: .75rem;
+
+}
+
+
