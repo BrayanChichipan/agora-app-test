@@ -2,11 +2,10 @@ import { FC, useState } from "react";
 import { Container } from "@/components/layouts";
 import Logo from "@/assets/brand/img/logo.png";
 import styles from "./navbar.module.scss";
-import { LINKS } from "./constants";
 import { NavLink } from "./NavLink";
 import { Button } from "@/components/ui";
 import { useDimensions } from "@/hooks";
-import { BREAKPOINTS } from "@/constants";
+import { BREAKPOINTS, MAIN_LINKS } from "@/constants";
 import { classNames } from "@/utils";
 
 interface NabvarProps {}
@@ -22,7 +21,7 @@ export const Navbar: FC<NabvarProps> = () => {
           <img src={Logo} alt="logo" className={styles["logo-img"]} />
           {width >= BREAKPOINTS.DESKTOP && (
             <div>
-              {LINKS.map((link) => (
+              {MAIN_LINKS.map((link) => (
                 <NavLink {...link} />
               ))}
             </div>
@@ -61,7 +60,7 @@ export const Navbar: FC<NabvarProps> = () => {
             })}
           >
             {width < BREAKPOINTS.DESKTOP &&
-              LINKS.map((link) => <NavLink {...link} />)}
+              MAIN_LINKS.map((link) => <NavLink {...link} />)}
           </div>
         </Container>
       </div>

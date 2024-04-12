@@ -3,3 +3,5 @@ export const BREAKPOINTS = {
   TABLET: 768,
   DESKTOP: 1140,
 };
+
+export * from "./links";

@@ -1,4 +1,4 @@
-export const LINKS = [
+export const MAIN_LINKS = [
   {
     name: "Quiénes somos",
     url: "/",

@@ -1,0 +1,81 @@
+@import '/src/styles/mixins.scss';
+@import '/src/styles/variables.scss';
+
+.container{
+  max-width: 100%;
+
+  @include media("<=desktop") {
+    padding-inline: 1rem;
+  }
+
+  .footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @include media("<tablet") {
+      grid-template-columns: 1fr;
+    }
+
+    .brand-column{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+
+      .rights{
+        font-size: 0.625rem;
+
+        a{
+          color: $secondary-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .links-column{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      a{
+        @include caption($font-light);
+        color: $neutral-1;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.social-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+  i{
+    font-size: 1.5rem;
+  }
+}
+
+.subscribe{
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  i{
+    color: $primary-color !important;
+    transform: rotate(-45deg);
+  }
+  a{
+    color: $primary-color !important;
+    font-weight: $font-semi-bold !important;
+  }
+}
+
+.language-selector{
+  border-radius: .2rem;
+  background-color: $neutral-1;
+  color: $white;
+  padding: 5px 15px;
+  @include caption($font-semi-bold);
+  font-size: .75rem;
+  width: fit-content;
+}
