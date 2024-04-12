@@ -13,11 +13,11 @@
 
 @mixin header-2($font-weight) {
   font-weight: $font-weight;
-  font-size: 36px;
-  line-height: 54px;
+  font-size: 28px;
+  line-height: 40px;
 
   @include media("<=tablet") {
-    font-size: 24px;
+    font-size: 30px;
     line-height: 32px;
   }
 }
@@ -47,10 +47,7 @@
   font-weight: $font-weight;
   font-size: 20px;
   line-height: 24px;
-  @include media("<=tablet") {
-    font-size: 14px;
-    line-height: 22px;
-  }
+ 
 }
 
 @mixin header-6($font-weight) {
