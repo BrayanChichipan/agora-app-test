@@ -1,0 +1,22 @@
+@import '/src/styles/mixins.scss';
+@import '/src/styles/variables.scss';
+
+.input{
+  border-top: none;
+  border-right: none;
+  border-left: none;
+
+  border-bottom: 1px solid $white;
+  background-color: transparent;
+  height: 2.5rem;
+  padding: 0 .5rem;
+  outline: none;
+
+  font-family: inherit;
+  color: $white;
+
+  &::placeholder{
+    color: $white;
+  }
+  
+}

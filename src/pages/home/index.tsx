@@ -4,6 +4,7 @@ import { WhatWeDo } from "./WhatWeDo";
 import { Announcement } from "./Announcement";
 import { Impact } from "./Impact";
 import { Vacancies } from "./Vacancies";
+import { ContactForm } from "./ContactForm";
 
 export const Home = () => {
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
       <Announcement />
       <Impact />
       <Vacancies />
+      <ContactForm />
       <Footer />
     </div>
   );
