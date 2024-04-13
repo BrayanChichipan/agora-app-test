@@ -2,6 +2,7 @@ import { Navbar } from "@/components/common";
 import { Footer } from "@/components/common/Footer";
 import { WhatWeDo } from "./WhatWeDo";
 import { Announcement } from "./Announcement";
+import { Impact } from "./Impact";
 
 export const Home = () => {
   return (
@@ -11,6 +12,7 @@ export const Home = () => {
       </div>
       <WhatWeDo />
       <Announcement />
+      <Impact />
       <Footer />
     </div>
   );

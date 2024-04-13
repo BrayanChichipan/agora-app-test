@@ -1,0 +1,107 @@
+@import '/src/styles/mixins.scss';
+@import '/src/styles/variables.scss';
+
+.container{
+  max-width: 100%;
+  margin: 4.375rem 0;
+  background-color: $primary-color;
+  border-radius: 1rem;
+
+
+  @include media("<=desktop") {
+    padding-inline: 1rem;
+  }
+
+  .content{
+    padding: 5rem 0;
+
+   
+    .main-content-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5remrem;
+
+      .text{
+        width: 30%;
+        color: $white;
+        align-self: flex-end;
+
+        h2{
+          @include header-2($font-semi-bold);
+        }
+
+        @include media("<=tablet") {
+          width: 100%;
+        }
+      }
+
+      .cards-container{
+        width: 60%;
+
+        @include media("<=tablet") {
+          width: 100%;
+        }
+
+        .show-more{
+          display: flex;
+          align-items: center;
+          @include caption($font-bold);
+          color: $white;
+          justify-content: flex-end;
+          margin-bottom: 2rem;
+          
+          @include media("<=tablet") {
+            justify-content: flex-start;
+            @include body-2($font-bold);
+          }
+
+          i{
+            transform: rotate(-45deg);
+            margin-left: .25rem;
+          }
+        }
+    
+
+        .cards{
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+  
+          @include media("<=tablet") {
+            grid-template-columns: 1fr;
+            width: 100%;
+          }
+  
+          .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2rem .5rem;
+            background: $white;
+            border-radius: 1rem;
+            color: $primary-color;
+            text-align: center;
+            transition: all .2s ease;
+  
+            &:hover{
+              transform: scale(1.1);
+              
+            }
+  
+            h3{
+              margin: 0;
+              font-size: 1.75rem;
+              @include media("<=tablet") {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+
+      
+    }
+  }
+}
