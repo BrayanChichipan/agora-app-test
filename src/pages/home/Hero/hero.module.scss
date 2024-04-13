@@ -1,3 +1,5 @@
+@import '/src/styles/mixins.scss';
+
 .container{
   .hero-image{
     width: 100%;
@@ -17,6 +19,10 @@
       width: 100%;
       object-fit: contain;
       transform: translateY(-50%);
+      
+      @include media('<phone') {
+        transform: translateY(-20%);
+      }
     }
   
   }

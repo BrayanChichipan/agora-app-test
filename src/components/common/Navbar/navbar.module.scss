@@ -53,6 +53,9 @@
 .mobile-links-container{
   display: none;
   overflow: hidden;
+  position: absolute;
+  background: $white;
+  width: 100%;
   
   @include media(">tablet", "<=desktop") {
     background-color: #B1B1B1;

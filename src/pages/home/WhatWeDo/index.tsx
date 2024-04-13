@@ -15,7 +15,13 @@ export const WhatWeDo = () => {
             </p>
           </div>
           <div style={{ marginLeft: "auto" }}>
-            <a>Conocer más sobre nuestros programas</a>
+            <a>
+              Conocer más sobre nuestros programas{" "}
+              <i
+                className="far fa-arrow-alt-circle-right"
+                aria-hidden="true"
+              ></i>
+            </a>
           </div>
         </div>
         <div className={styles["cards-container"]}>

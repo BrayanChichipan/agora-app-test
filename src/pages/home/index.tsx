@@ -6,6 +6,7 @@ import { Impact } from "./Impact";
 import { Vacancies } from "./Vacancies";
 import { ContactForm } from "./ContactForm";
 import { Hero } from "./Hero";
+import { AlliesAndFinanciers } from "./AlliesAndFinanciers";
 
 export const Home = () => {
   return (
@@ -16,6 +17,7 @@ export const Home = () => {
       <Hero />
       <WhatWeDo />
       <Announcement />
+      <AlliesAndFinanciers />
       <Impact />
       <Vacancies />
       <ContactForm />
