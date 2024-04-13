@@ -3,6 +3,7 @@ import { Footer } from "@/components/common/Footer";
 import { WhatWeDo } from "./WhatWeDo";
 import { Announcement } from "./Announcement";
 import { Impact } from "./Impact";
+import { Vacancies } from "./Vacancies";
 
 export const Home = () => {
   return (
@@ -13,6 +14,7 @@ export const Home = () => {
       <WhatWeDo />
       <Announcement />
       <Impact />
+      <Vacancies />
       <Footer />
     </div>
   );
