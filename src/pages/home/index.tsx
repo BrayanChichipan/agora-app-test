@@ -5,6 +5,7 @@ import { Announcement } from "./Announcement";
 import { Impact } from "./Impact";
 import { Vacancies } from "./Vacancies";
 import { ContactForm } from "./ContactForm";
+import { Hero } from "./Hero";
 
 export const Home = () => {
   return (
@@ -12,6 +13,7 @@ export const Home = () => {
       <div style={{ position: "sticky", top: 0, zIndex: 2 }}>
         <Navbar />
       </div>
+      <Hero />
       <WhatWeDo />
       <Announcement />
       <Impact />

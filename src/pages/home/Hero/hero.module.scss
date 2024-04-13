@@ -1,0 +1,23 @@
+.container{
+  .hero-image{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .swiper-container {
+    position: relative;
+  }
+  
+
+  .item-slider {
+    height: 500px;
+    img{
+      // height: 500px;
+      width: 100%;
+      object-fit: contain;
+      transform: translateY(-50%);
+    }
+  
+  }
+}
