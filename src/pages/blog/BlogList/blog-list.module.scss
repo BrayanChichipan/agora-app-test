@@ -1,0 +1,107 @@
+@import '/src/styles/mixins.scss';
+@import '/src/styles/variables.scss';
+
+.container{
+  max-width: 100%;
+  margin: 4.375rem 0;
+
+  @include media("<=desktop") {
+    padding-inline: 1rem;
+  }
+
+  @include media("<=tablet") {
+    margin: 2.5rem 0;
+  }
+
+  .blog-types{
+    background-color: $neutral-1;
+    display: flex;
+    gap: 1rem;
+    color: $white;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    width: 80%;
+    margin: 2rem auto;
+
+    @include media("<=tablet") {
+      width: unset;
+      flex-wrap: wrap
+    }
+
+    span{
+      font-size: 12px;
+    }
+    
+  }
+
+  .blog-list-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+    margin: 4rem 0;
+
+    @include media("<=desktop") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media("<=tablet") {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .card-container{
+    
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: space-between;
+  
+      @include media("<=tablet") {
+        margin-bottom: 2rem;
+      }
+  
+      .chip{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1;
+      }
+     
+      img{
+        width: 100%;
+        min-height: 18rem;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+  
+      .card-body{
+        border-radius: 1rem;
+      
+        .card-title{
+          @include header-5($font-bold);
+          margin: 0;
+        }
+    
+        .card-subtitle{
+          @include caption($font-regular);
+          margin: 2rem 0 1rem;
+        }
+  
+      }
+      button{
+        height: 2rem;
+        padding-inline: 1.5rem;
+        width: fit-content;
+      }
+
+     
+      
+    }
+  }
+}

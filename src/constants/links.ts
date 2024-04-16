@@ -17,7 +17,7 @@ export const MAIN_LINKS = [
   },
   {
     name: "Blog",
-    url: "/contact",
+    url: "/blog",
   },
   {
     name: "Recursos",
