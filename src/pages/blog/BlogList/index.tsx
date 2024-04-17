@@ -3,10 +3,12 @@ import styles from "./blog-list.module.scss";
 import { BLOG_TYPES } from "./constants";
 import { Button, Chip } from "@/components/ui";
 import { useGetAllPotsQuery } from "@/services";
-import { Spinner, Pagination } from "@/components/ui";
+import { Spinner } from "@/components/ui";
 import { useSearchParams } from "react-router-dom";
 import { QueryParams } from "@/interfaces";
 import { useEffect, useState } from "react";
+
+const PAGES = [1, 2, 3];
 
 export const BlogList = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -46,7 +48,9 @@ export const BlogList = () => {
           {!isFetching &&
             data?.data.map((post) => (
               <div className={styles["card-container"]} key={post._id}>
-                <Chip className={styles.chip}>{post.type}</Chip>
+                <Chip className={styles.chip}>
+                  {BLOG_TYPES.find((type) => type.value == post.type)?.label}
+                </Chip>
                 <img
                   src={post.images?.[0] || "/images/emprendedora.png"}
                   alt="emprendedora"
@@ -59,17 +63,26 @@ export const BlogList = () => {
               </div>
             ))}
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <Pagination
-            totalPages={Math.ceil((data?.count || 12) / 12)}
-            onChange={(newPage) => {
-              setSearchParams({
-                ...searchParams,
-                page: String(newPage),
-              });
-            }}
-            pagesItems={2}
-          />
+        <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
+          {PAGES.map((page) => (
+            <span
+              onClick={() =>
+                setSearchParams({
+                  ...searchParams,
+                  page: String(page),
+                })
+              }
+              style={{
+                color:
+                  searchParams.get("page") === String(page)
+                    ? "#C1285D"
+                    : "#333",
+                cursor: "pointer",
+              }}
+            >
+              {page}
+            </span>
+          ))}
         </div>
         {isFetching && (
           <div style={{ display: "flex", justifyContent: "center" }}>
