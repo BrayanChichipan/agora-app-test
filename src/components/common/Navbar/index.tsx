@@ -7,12 +7,16 @@ import { Button } from "@/components/ui";
 import { useDimensions } from "@/hooks";
 import { BREAKPOINTS, MAIN_LINKS } from "@/constants";
 import { classNames } from "@/utils";
+import { useLocation } from "react-router-dom";
 
 interface NabvarProps {}
 
 export const Navbar: FC<NabvarProps> = () => {
   const { width } = useDimensions();
+  const { pathname } = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  console.log(pathname);
 
   return (
     <div className={styles.container}>
@@ -22,7 +26,11 @@ export const Navbar: FC<NabvarProps> = () => {
           {width >= BREAKPOINTS.DESKTOP && (
             <div>
               {MAIN_LINKS.map((link) => (
-                <NavLink {...link} />
+                <NavLink
+                  {...link}
+                  key={link.name}
+                  active={pathname == link.url}
+                />
               ))}
             </div>
           )}
@@ -60,7 +68,7 @@ export const Navbar: FC<NabvarProps> = () => {
             })}
           >
             {width < BREAKPOINTS.DESKTOP &&
-              MAIN_LINKS.map((link) => <NavLink {...link} />)}
+              MAIN_LINKS.map((link) => <NavLink {...link} key={link.name} />)}
           </div>
         </Container>
       </div>

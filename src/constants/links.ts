@@ -30,5 +30,6 @@ export const MAIN_LINKS = [
   {
     name: "Change Lab",
     url: "/",
+    active: true,
   },
 ];

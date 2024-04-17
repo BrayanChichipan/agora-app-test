@@ -3,6 +3,7 @@ import Logo from "@/assets/brand/img/logo.png";
 import styles from "./footer.module.scss";
 import { MAIN_LINKS } from "@/constants";
 import { Button } from "@/components/ui";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -22,7 +23,9 @@ export const Footer = () => {
           </div>
           <div className={styles["links-column"]}>
             {MAIN_LINKS.map((link) => (
-              <a>{link.name}</a>
+              <Link to={link.url} key={link.name}>
+                {link.name}
+              </Link>
             ))}
           </div>
           <div className={styles["links-column"]}>
