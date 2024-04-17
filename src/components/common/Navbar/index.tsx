@@ -16,8 +16,6 @@ export const Navbar: FC<NabvarProps> = () => {
   const { pathname } = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  console.log(pathname);
-
   return (
     <div className={styles.container}>
       <Container as={"header"}>

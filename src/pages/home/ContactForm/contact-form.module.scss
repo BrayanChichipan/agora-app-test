@@ -38,6 +38,14 @@
         gap: 1.5rem;
       }
     }
+
+    .success-message{
+      color: $white;
+    }
+
+    .error-message{
+      color: $secondary-color;
+    }
   }
 
 
