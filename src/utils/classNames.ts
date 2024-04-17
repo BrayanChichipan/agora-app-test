@@ -4,7 +4,7 @@ type ClassDictionary = {
 
 export function classNames(classes: ClassDictionary): string {
   return Object.entries(classes)
-    .filter(([className, condition]) => !!condition)
+    .filter(([, condition]) => !!condition)
     .map(([className]) => className)
     .join(" ");
 }
