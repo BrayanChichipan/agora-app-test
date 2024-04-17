@@ -63,6 +63,11 @@ export const BlogList = () => {
               </div>
             ))}
         </div>
+        {isFetching && (
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Spinner />
+          </div>
+        )}
         <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
           {PAGES.map((page) => (
             <span
@@ -84,11 +89,6 @@ export const BlogList = () => {
             </span>
           ))}
         </div>
-        {isFetching && (
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Spinner />
-          </div>
-        )}
       </Container>
     </div>
   );
