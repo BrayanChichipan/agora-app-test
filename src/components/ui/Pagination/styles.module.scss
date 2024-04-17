@@ -1,0 +1,32 @@
+@import '/src/styles/mixins.scss';
+@import '/src/styles/variables.scss';
+
+.container {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	align-items: center;
+	background: transparent;
+}
+
+.page-item {
+	height: 2rem;
+	width: 2rem;
+	min-width: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	cursor: pointer;
+	color: $neutral-1;
+	transition: all 0.2s;
+	background-color: $white;
+}
+
+.current-page-item {
+	background-color: var(--color);
+	color: white;
+	font-weight: bold;
+	transform: scale(1.2);
+}
+
